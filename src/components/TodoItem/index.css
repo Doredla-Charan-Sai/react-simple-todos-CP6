@@ -1,0 +1,21 @@
+/* Write your CSS here */
+.todo-item-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.delete-btn {
+  color: #ff0b37;
+  border-color: #ff0b37;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+.todo-item-para {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: black;
+}
