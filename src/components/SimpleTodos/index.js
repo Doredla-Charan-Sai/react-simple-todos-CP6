@@ -44,6 +44,13 @@ const initialTodosList = [
 class SimpleTodos extends Component {
   state = {todosList: initialTodosList}
 
+  onDelete = uniqueId => {
+    const {todosList} = this.state
+    this.setState({
+      todosList: todosList.filter(eachItem => !(eachItem.id === uniqueId)),
+    })
+  }
+
   render() {
     const {todosList} = this.state
     return (
@@ -52,7 +59,11 @@ class SimpleTodos extends Component {
           <h1 className="main-head">Simple Todos</h1>
           <ul className="todo-list">
             {todosList.map(item => (
-              <TodoItem todoDetails={item} key={item.id} />
+              <TodoItem
+                todoDetails={item}
+                key={item.id}
+                onDelete={() => this.onDelete(item.id)}
+              />
             ))}
           </ul>
         </div>
