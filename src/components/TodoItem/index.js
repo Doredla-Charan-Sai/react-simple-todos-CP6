@@ -4,15 +4,15 @@ import './index.css'
 
 class TodoItem extends Component {
   render() {
-    const {todoDetails} = this.props
-    const {todo, id, onDelete} = todoDetails
+    const {todoDetails, onTouch} = this.props
+    const {title, id} = todoDetails
     const deleteItem = () => {
-      onDelete(id)
+      onTouch(id)
     }
     return (
       <li className="todo-item-cont">
-        <p className="todo-item-para">{todo}</p>
-        <button className="delete-btn" type="button" onClick={deleteItem()}>
+        <p className="todo-item-para">{title}</p>
+        <button className="delete-btn" type="button" onClick={deleteItem}>
           Delete
         </button>
       </li>

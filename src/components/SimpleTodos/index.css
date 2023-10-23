@@ -1,1 +1,25 @@
 /* Write your CSS here */
+.bg-cont {
+  background-color: #ffc2a0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.content-cont {
+  border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  padding: 30px;
+  width: 100%;
+}
+
+.main-head {
+  color: #ff8542;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}

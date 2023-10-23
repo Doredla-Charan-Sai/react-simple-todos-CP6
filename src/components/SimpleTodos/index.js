@@ -47,7 +47,7 @@ class SimpleTodos extends Component {
   onDelete = uniqueId => {
     const {todosList} = this.state
     this.setState({
-      todosList: todosList.filter(eachItem => !(eachItem.id === uniqueId)),
+      todosList: todosList.filter(eachItem => eachItem.id !== uniqueId),
     })
   }
 
@@ -62,7 +62,7 @@ class SimpleTodos extends Component {
               <TodoItem
                 todoDetails={item}
                 key={item.id}
-                onDelete={() => this.onDelete(item.id)}
+                onTouch={this.onDelete}
               />
             ))}
           </ul>
